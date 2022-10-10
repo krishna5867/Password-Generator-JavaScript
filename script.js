@@ -21,8 +21,8 @@ const randomFunc = {
 }
 
 clipboardEl.addEventListener('click', () => {
-let passCopy = document.querySelector("#result");
-navigator.clipboard.writeText(passCopy.innerText);
+        let passCopy = document.querySelector("#result");
+        navigator.clipboard.writeText(passCopy.innerText);
 })
 
 generateEl.addEventListener('click', () => {
@@ -39,7 +39,7 @@ function generatePassword(lower, upper, number, symbol, length) {
         
             let generatedPassword = "";
         
-        for (let i = 0; i <= length; i++) {
+        for (let i = 1; i <= length; i++) {
         generatedPassword += newPass[Math.floor(Math.random() * newPass.length)]();
         }
         resultEl.innerText = generatedPassword;
